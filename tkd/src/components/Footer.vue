@@ -1,3 +1,9 @@
+<script setup>
+import { useSinglePrismicDocument } from "@prismicio/vue";
+
+const { data: contact } = useSinglePrismicDocument("contact");
+</script>
+
 <template>
     <div class="footer">
         <div class="container">
@@ -8,16 +14,13 @@
             </div>
             <ul class="nav-list">
                 <li>
-                    <router-link to="/mission">Our Mission</router-link>
+                    <router-link to="/about">About Us</router-link>
                 </li>
                 <li>
-                    <router-link to="/team">Our Team</router-link>
+                    <router-link to="/schedule">Schedule</router-link>
                 </li>
                 <li>
-                    <router-link to="/work">Our Work</router-link>                
-                </li>
-                <li>
-                    <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=webrisingdev@gmail.com">Contact Us</a>
+                    <router-link to="/contact">Contact</router-link>                
                 </li>
             </ul>
             </div>
@@ -25,9 +28,8 @@
     </div>
 </template>
 
-<script setup>
-import { useSinglePrismicDocument } from "@prismicio/vue";
-
-const { data: contact } = useSinglePrismicDocument("contact");
-
+<script>
+export default {
+    name: "Footer",
+}
 </script>

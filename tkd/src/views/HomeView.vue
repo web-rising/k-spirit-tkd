@@ -1,18 +1,17 @@
-<template>
-	<div class="container">
-		<h1>hello</h1>
-		<!-- <h1>{{$prismic.asText(homepage.data.name)}}</h1> -->
-		<!-- <div>{{$prismic.asImageSrc(homepage.data.image1)}}</div> -->
-		<prismic-image :field="homepage.data.splash"></prismic-image>
-	</div>
-</template>
-
 <script setup>
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
 
 </script>
+
+<template>
+	<div class="container">
+		<h1>"Make the impossible possible."</h1>
+		<h4>K-Spirit Taekwondo</h4>
+		<prismic-image :field="homepage.data.splash"></prismic-image>
+	</div>
+</template>
 
 <style scoped>
 
