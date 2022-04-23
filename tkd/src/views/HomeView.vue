@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <h1>yo</h1>
-   <h1>{{$prismic.asText(homepage.data.name)}}</h1>
-	<h2>{{$prismic.asText(homepage.data.slogan)}}</h2>
-  </div>
+	<div class="container">
+		<header class="block">
+			<h1>{{$prismic.asText(homepage.data.name)}}</h1>
+			<h2>{{$prismic.asText(homepage.data.slogan)}}</h2>
+		</header>
+	</div>
 </template>
 
-<script>
-import {useSinglePrismicDocument} from '@/prismicio/vue'
+<script setup>
+import { useSinglePrismicDocument } from "@prismicio/vue";
 
-const {data: homepage} = useSinglePrismicDocument('homepage')
+const { data: homepage } = useSinglePrismicDocument("homepage");
 
-export default {
- 
-}
 </script>
 
-<style>
+<style scoped>
 
 </style>
