@@ -8,9 +8,10 @@ const { data: contact } = useSinglePrismicDocument("contact");
     <div class="footer">
         <div class="container">
             <div class="contact">
-                <h5 class="email">{{$prismic.asText(contact.data.email)}}</h5>
+                <!-- <h5 class="email">{{$prismic.asText(contact.data.email)}}</h5>
                 <h5 class="telephone">{{$prismic.asText(contact.data.number)}}</h5>
-                <h5 class="address">{{$prismic.asText(contact.data.address)}}</h5>
+                <h5 class="address">{{$prismic.asText(contact.data.address)}}</h5> -->
+                <h1>hello</h1>
             </div>
             <ul class="nav-list">
                 <li>
@@ -29,6 +30,7 @@ const { data: contact } = useSinglePrismicDocument("contact");
 </template>
 
 <script>
+console.log('hey')
 export default {
     name: "Footer",
 }
