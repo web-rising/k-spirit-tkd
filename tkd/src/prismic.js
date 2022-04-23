@@ -1,12 +1,18 @@
-import { createPrismic, usePrismic } from "@prismicio/vue";
-import { linkResolver } from "./linkResolver";
+import { createPrismic } from "@prismicio/vue";
 
 const prismic = createPrismic({
-  endpoint: import.meta.env.VITE_ENDPOINT,
-  clientConfig: {
-      accessToken: import.meta.env.VITE_ACCESSTOKEN
-  },
-  linkResolver,
+	endpoint: import.meta.env.VITE_ENDPOINT,
+	clientConfig: {
+		defaultParams: {
+			routes: [
+				{
+					type: "homepage",
+					path: "/",
+				},
+			],
+		},
+		accessToken: import.meta.env.VITE_ACCESSTOKEN
+	},
 });
 
 export default prismic;
