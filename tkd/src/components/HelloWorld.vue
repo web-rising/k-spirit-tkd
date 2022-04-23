@@ -1,12 +1,3 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
@@ -17,6 +8,29 @@ defineProps({
     </h3>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'HelloWorld',
+  data() {
+    return {
+      res: null
+    }
+  },
+  methods: {
+    async getContent() {
+      const response = await this.$prismic.client.query('homepage')
+      this.res = response
+      console.log(response)
+    }
+  },
+  created() {
+    this.getContent()
+  }
+}
+
+</script>
+
 
 <style scoped>
 h1 {
