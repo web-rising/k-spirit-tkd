@@ -7,6 +7,14 @@ const {data: contact} = useSinglePrismicDocument("footer");
 <template>
 	<div class="container">
 		<h1 class="test">hello</h1>
+		<h1>Make the impossible possible</h1>
+		<h4>K-Spirit Taekwondo</h4>
+		<prismic-image :field="homepage.data.splash"></prismic-image>
+		<Footer
+		:email="$prismic.asText(contact.data.email)"
+		:telephone="$prismic.asText(contact.data.telephone)"
+		:address="$prismic.asText(contact.data.address)"
+		/>
 		<!-- <h1>{{$prismic.asText(homepage.data.name)}}</h1> -->
 		<!-- <div>{{$prismic.asImageSrc(homepage.data.image1)}}</div> -->
 		<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
