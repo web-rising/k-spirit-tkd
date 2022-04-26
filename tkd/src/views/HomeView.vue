@@ -133,7 +133,7 @@ export default {
 	}
 
 	.image {
-		width: 100%;
+		width: 50%;
 	}
 }
 </style>
