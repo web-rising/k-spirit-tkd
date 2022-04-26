@@ -105,7 +105,7 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (min-device-width: 400px) and (max-device-width: 500px) {
+@media only screen and (min-device-width: 300px) and (max-device-width: 500px) {
 	.test {
 		color: aqua;
 	}
