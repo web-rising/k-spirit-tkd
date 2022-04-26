@@ -1,23 +1,20 @@
 <script setup>
 import { useSinglePrismicDocument } from "@prismicio/vue";
+
 const { data: homepage } = useSinglePrismicDocument("homepage");
 const {data: contact} = useSinglePrismicDocument("footer");
 </script>
 
 <template>
 	<div class="container">
-		<h1 class="test">hello</h1>
-		<h1>Make the impossible possible</h1>
-		<h4>K-Spirit Taekwondo</h4>
-		<prismic-image :field="homepage.data.splash"></prismic-image>
-		<Footer
-		:email="$prismic.asText(contact.data.email)"
-		:telephone="$prismic.asText(contact.data.telephone)"
-		:address="$prismic.asText(contact.data.address)"
-		/>
+		<div class="splash">
+			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
+			<div class="mask"></div>
+			<h1>"Make the impossible possible."</h1>
+			<h4>K-Spirit Taekwondo</h4>
+		</div>
 		<!-- <h1>{{$prismic.asText(homepage.data.name)}}</h1> -->
 		<!-- <div>{{$prismic.asImageSrc(homepage.data.image1)}}</div> -->
-		<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
 		<div class="gallery">
 			<swiper
 				class="swiper"
@@ -85,12 +82,6 @@ const {data: contact} = useSinglePrismicDocument("footer");
 	</div>
 </template>
 
-<script setup>
-import { useSinglePrismicDocument } from "@prismicio/vue";
-
-const { data: homepage } = useSinglePrismicDocument("homepage");
-</script>
-
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay } from "swiper";
@@ -119,17 +110,35 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (min-device-width: 400px) and (max-device-width: 500px) {
-	.test {
-		color: aqua;
+@media only screen and (min-device-width: 350px) and (max-device-width: 500px) {
+	.splash {
+		height: 80vh;
+		width: 100%;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
 	}
+
 	.flag {
-		width: 2rem;
+		position: absolute;
+		width: 250%;
+		right: -12rem;
+		z-index: -2;
+	}
+
+	.mask {
+		position: absolute;
+		z-index: -1;
+		width: 100%;
+		height: 80vh;
+		background-color: rgba(0, 0, 0, 0.5);
 	}
 	.gallery {
 		width: 100%;
-		height: 31.5rem;
-		margin: 0 auto;
+		height: 25rem;
+		object-fit: cover;
 	}
 
 	.image {
