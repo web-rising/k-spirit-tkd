@@ -1,6 +1,16 @@
 <template>
-	<router-view />
+	<div class="app">
+		<router-view/>
+	</div>
 </template>
 
-<script setup>
+<script>
+
+
+export default {
+	components: {
+    
+},
+}
+
 </script>
