@@ -6,7 +6,7 @@ const {data: contact} = useSinglePrismicDocument("footer");
 </script>
 
 <template>
-	<div class="container">
+	<div class="home">
 		<div class="splash">
 			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
 			<div class="mask"></div>
@@ -111,6 +111,9 @@ export default {
 
 <style scoped>
 @media only screen and (max-width: 600px) {
+	.home {
+		overflow-x: hidden;
+	}
 	.splash {
 		height: 80vh;
 		width: 100%;
@@ -123,10 +126,11 @@ export default {
 
 	.flag {
 		position: absolute;
-		width: 250%;
+		width: 100%;
 		height: 80vh;
-		right: -12rem;
+		/* right: -12rem; */
 		object-fit: cover;
+		object-position: 70%;
 		z-index: -2;
 	}
 
