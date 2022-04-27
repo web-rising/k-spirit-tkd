@@ -1,3 +1,9 @@
+<script setup>
+import { useSinglePrismicDocument } from "@prismicio/vue";
+const { data: homepage } = useSinglePrismicDocument("homepage");
+const { data: contact } = useSinglePrismicDocument("footer");
+</script>
+
 <template>
 	<div class="container">
 		<h1 class="test">hello</h1>

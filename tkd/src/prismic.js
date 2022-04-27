@@ -9,6 +9,10 @@ const prismic = createPrismic({
 					type: "homepage",
 					path: "/",
 				},
+				{
+					type: "footer",
+					path: "/",
+				},
 			],
 		},
 		accessToken: import.meta.env.VITE_ACCESSTOKEN
