@@ -1,9 +1,14 @@
+<script setup>
+import { useSinglePrismicDocument } from "@prismicio/vue";
+const { data: homepage } = useSinglePrismicDocument("homepage");
+const { data: contact } = useSinglePrismicDocument("footer");
+</script>
+
 <template>
 	<div class="container">
 		<h1 class="test">hello</h1>
 		<h1>Make the impossible possible</h1>
 		<h4>K-Spirit Taekwondo</h4>
-		<prismic-image :field="homepage.data.splash"></prismic-image>
 		<Footer
 			:email="$prismic.asText(contact.data.email)"
 			:telephone="$prismic.asText(contact.data.telephone)"
@@ -81,11 +86,7 @@
 	</div>
 </template>
 
-<script setup>
-import { useSinglePrismicDocument } from "@prismicio/vue";
-const { data: homepage } = useSinglePrismicDocument("homepage");
-const { data: contact } = useSinglePrismicDocument("footer");
-
+<script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
