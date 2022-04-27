@@ -2,7 +2,7 @@
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
-const {data: contact} = useSinglePrismicDocument("footer");
+const { data: contact } = useSinglePrismicDocument("footer");
 </script>
 
 <template>
@@ -18,7 +18,9 @@ const {data: contact} = useSinglePrismicDocument("footer");
 		<div class="gallery">
 			<swiper
 				class="swiper"
-				:modules="[Autoplay]"
+				:modules="[Autoplay, Pagination, Navigation]"
+				navigation
+				:pagination="{ clickable: true }"
 				:slides-per-view="1"
 				:space-between="0"
 				@swiper="onSwiper"
@@ -84,29 +86,10 @@ const {data: contact} = useSinglePrismicDocument("footer");
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay } from "swiper";
-
+import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
-import "swiper/css/bundle";
-
-export default {
-	components: {
-		Swiper,
-		SwiperSlide,
-	},
-	setup() {
-		const onSwiper = (swiper) => {
-			console.log(swiper);
-		};
-		const onSlideChange = () => {
-			console.log("slide change");
-		};
-		return {
-			onSwiper,
-			onSlideChange,
-		};
-	},
-};
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 </script>
 
 <style scoped>
