@@ -110,7 +110,7 @@ export default {
 </script>
 
 <style scoped>
-@media only screen and (min-device-width: 350px) and (max-device-width: 500px) {
+@media only screen and (max-width: 600px) {
 	.splash {
 		height: 80vh;
 		width: 100%;
@@ -124,7 +124,9 @@ export default {
 	.flag {
 		position: absolute;
 		width: 250%;
+		height: 80vh;
 		right: -12rem;
+		object-fit: cover;
 		z-index: -2;
 	}
 
@@ -139,6 +141,7 @@ export default {
 		width: 100%;
 		height: 25rem;
 		object-fit: cover;
+		z-index: 1;
 	}
 
 	.image {
