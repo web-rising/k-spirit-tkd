@@ -1,6 +1,5 @@
 <template>
 	<div class="app">
-		<Hamburger />
 		<Nav />
 		<router-view />
 		<!-- <Footer
@@ -13,14 +12,12 @@
 
 <script>
 import Nav from "./components/Nav.vue";
-import Hamburger from "./components/Hambuger.vue";
 
 // import Footer from "./components/Footer.vue"
 
 export default {
 	components: {
 		Nav,
-		Hamburger,
 
 		// Footer
 	},
