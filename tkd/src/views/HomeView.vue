@@ -3,7 +3,7 @@ import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
 const { data: contact } = useSinglePrismicDocument("footer");
-console.log(homepage)
+console.log(homepage);
 </script>
 
 <template>
