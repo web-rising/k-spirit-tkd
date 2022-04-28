@@ -14,8 +14,12 @@
                     <router-link to="/schedule">Schedule</router-link>
                 </li>
                 <li>
-                    <router-link to="/contact">Contact</router-link>                
+                    <router-link to="/classes">Classes</router-link>                
                 </li>
+                <li>
+                    <router-link to="/gallery">Gallery</router-link>                
+                </li>
+
             </ul>
             </div>
         <h6 class="web-rising">Made with ❤️ by <a href="https://youtube.com" target="_blank">WebRising</a></h6>
@@ -26,7 +30,7 @@
 <script>
 console.log('hey')
 export default {
-    name: "Footer",
+    name: "footer",
     props: {
         email: String,
         telephone: String,

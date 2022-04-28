@@ -3,19 +3,23 @@ import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
 const { data: contact } = useSinglePrismicDocument("footer");
+console.log(homepage)
 </script>
 
 <template>
 	<div class="home">
-		<div class="splash">
+		<section class="splash">
 			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
 			<div class="mask"></div>
-			<h1>"Make the impossible possible."</h1>
-			<h4>K-Spirit Taekwondo</h4>
-		</div>
-		<!-- <h1>{{$prismic.asText(homepage.data.name)}}</h1> -->
-		<!-- <div>{{$prismic.asImageSrc(homepage.data.image1)}}</div> -->
-		<div class="gallery">
+			<div class="text">
+				<h1>"Make the impossible possible."</h1>
+				<h4>K-Spirit Taekwondo</h4>
+			</div>
+		</section>
+		<section class="news">
+			<h2>News & Updates</h2>
+		</section>
+		<section class="gallery">
 			<swiper
 				class="swiper"
 				:modules="[Autoplay, Pagination, Navigation]"
@@ -80,7 +84,10 @@ const { data: contact } = useSinglePrismicDocument("footer");
 					></prismic-image
 				></swiper-slide>
 			</swiper>
-		</div>
+		</section>
+		<section class="meet">
+			<h2>Meet Master Cho</h2>
+		</section>
 	</div>
 </template>
 
@@ -111,10 +118,13 @@ import "swiper/css/pagination";
 		position: absolute;
 		width: 100%;
 		height: 80vh;
-		/* right: -12rem; */
 		object-fit: cover;
 		object-position: 70%;
 		z-index: -2;
+	}
+
+	.text {
+		padding: 0 1rem;
 	}
 
 	.mask {
@@ -124,15 +134,27 @@ import "swiper/css/pagination";
 		height: 80vh;
 		background-color: rgba(0, 0, 0, 0.5);
 	}
+
+	.news {
+		background-color: blue;
+		height: 40vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	.gallery {
 		width: 100%;
-		height: 25rem;
+		height: 60rem;
 		object-fit: cover;
 		z-index: 1;
 	}
 
 	.image {
 		width: 100%;
+	}
+	.meet {
+		
 	}
 }
 </style>
