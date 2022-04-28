@@ -9,6 +9,7 @@ const { data: contact } = useSinglePrismicDocument("footer");
 	<div class="home">
 		<div class="splash">
 			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
+
 			<div class="mask"></div>
 			<h1>"Make the impossible possible."</h1>
 			<h4>K-Spirit Taekwondo</h4>
