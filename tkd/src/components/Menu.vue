@@ -3,23 +3,27 @@
 		<div class="hamburger-container">
 			<div class="logo"></div>
 			<div class="burger">
-				<img class="close" src="../assets/close.svg" alt="" @click="closeBuger"/>
+				<img
+					class="close"
+					src="../assets/close.svg"
+					alt=""
+					@click="closeBuger"
+				/>
 			</div>
 			<ul class="nav-list">
-                <li>
-                    <router-link to="/about">About Us</router-link>
-                </li>
-                <li>
-                    <router-link to="/schedule">Schedule</router-link>
-                </li>
-                <li>
-                    <router-link to="/classes">Classes</router-link>                
-                </li>
-                <li>
-                    <router-link to="/gallery">Gallery</router-link>                
-                </li>
-
-            </ul>
+				<li>
+					<router-link to="/about" @click="closeBuger">About Us</router-link>
+				</li>
+				<li>
+					<router-link to="/schedule" @click="closeBuger">Schedule</router-link>
+				</li>
+				<li>
+					<router-link to="/classes" @click="closeBuger">Classes</router-link>
+				</li>
+				<li>
+					<router-link to="/gallery" @click="closeBuger">Gallery</router-link>
+				</li>
+			</ul>
 		</div>
 	</div>
 </template>
@@ -97,5 +101,4 @@ export default {
 	height: 2.2rem;
 	width: 2.2rem;
 }
-
 </style>
