@@ -4,15 +4,15 @@
 		<div class="burger">
 			<img class="menu" src="../assets/menu.svg" alt="" @click="openBurger" />
 		</div>
-		<Hamburger />
+		<Menu />
 	</div>
 </template>
 
 <script>
-import Hamburger from "../components/Hambuger.vue";
+import Menu from "./Menu.vue";
 export default {
 	components: {
-		Hamburger,
+		Menu,
 	},
 	methods: {
 		openBurger: function () {
@@ -35,6 +35,7 @@ export default {
 	padding: 1.3rem;
 	z-index: 2;
 }
+
 .logo {
 	height: 4rem;
 	width: 4rem;
@@ -46,6 +47,7 @@ export default {
 .burger {
 	position: fixed;
 	right: 1.3rem;
+    top: 1.3rem;
 	height: 4rem;
 	width: 4rem;
 	border-radius: 2rem;
@@ -63,12 +65,5 @@ export default {
 	height: 1.8rem;
 	width: 1.8rem;
 	/* display: none; */
-}
-
-.close {
-	position: absolute;
-	height: 2.2rem;
-	width: 2.2rem;
-	display: none;
 }
 </style>

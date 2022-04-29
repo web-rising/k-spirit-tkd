@@ -19,7 +19,6 @@
                 <li>
                     <router-link to="/gallery">Gallery</router-link>                
                 </li>
-
             </ul>
             </div>
         <h6 class="web-rising">Made with ❤️ by <a href="https://youtube.com" target="_blank">WebRising</a></h6>
