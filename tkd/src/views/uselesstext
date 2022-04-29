@@ -1,0 +1,66 @@
+:modules="[Autoplay, Pagination, Navigation]"
+				navigation
+				:pagination="{ clickable: true }"
+
+
+                <swiper
+				class="swiper"
+				:slides-per-view="1"
+				:space-between="0"
+				@swiper="onSwiper"
+				@slideChange="onSlideChange"
+				:loop="true"
+				:autoplay="{
+					delay: 3000,
+					disableOnInteraction: false,
+				}"
+			>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image1"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image2"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image3"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image4"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image5"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image6"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image7"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+				<swiper-slide
+					><prismic-image
+						:field="homepage.data.image8"
+						class="image"
+					></prismic-image
+				></swiper-slide>
+			</swiper>

@@ -9,7 +9,7 @@ console.log(homepage);
 <template>
 	<div class="home">
 		<section class="splash">
-			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
+			<!-- <prismic-image :field="homepage.data.splash" class="flag"></prismic-image> -->
 			<div class="mask"></div>
 			<div class="splash-text">
 				<h1>"Make the impossible possible."</h1>
@@ -26,68 +26,22 @@ console.log(homepage);
 		</section>
 		<section class="gallery">
 			<swiper
-				class="swiper"
-				:modules="[Autoplay, Pagination, Navigation]"
-				navigation
-				:pagination="{ clickable: true }"
 				:slides-per-view="1"
-				:space-between="0"
+				:space-between="50"
 				@swiper="onSwiper"
 				@slideChange="onSlideChange"
-				:loop="true"
-				:autoplay="{
-					delay: 3000,
-					disableOnInteraction: false,
-				}"
 			>
 				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image1"
-						class="image"
-					></prismic-image
-				></swiper-slide>
+					><img
+						src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/One-Piece-Character-Guide.jpg"
+						alt=""
+				/></swiper-slide>
 				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image2"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image3"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image4"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image5"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image6"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image7"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image8"
-						class="image"
-					></prismic-image
-				></swiper-slide>
+					><img
+						src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/One-Piece-Character-Guide.jpg"
+						alt=""
+				/></swiper-slide>
+				<swiper-slide>Slide 3</swiper-slide>
 			</swiper>
 		</section>
 		<section class="meet">
@@ -114,25 +68,6 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
 import "swiper/css";
-
-export default {
-	components: {
-		Swiper,
-		SwiperSlide,
-	},
-	setup() {
-		const onSwiper = (swiper) => {
-			console.log(swiper);
-		};
-		const onSlideChange = () => {
-			console.log("slide change");
-		};
-		return {
-			onSwiper,
-			onSlideChange,
-		};
-	},
-};
 </script>
 
 <style scoped>
