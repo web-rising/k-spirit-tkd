@@ -25,85 +25,10 @@ console.log(homepage);
 			</div>
 		</section>
 		<section class="gallery">
-			<swiper
-				class="swiper"
-				:modules="[Autoplay, Pagination, Navigation]"
-				navigation
-				:pagination="{ clickable: true }"
-				:slides-per-view="1"
-				:space-between="0"
-				@swiper="onSwiper"
-				@slideChange="onSlideChange"
-				:loop="true"
-				:autoplay="{
-					delay: 3000,
-					disableOnInteraction: false,
-				}"
-			>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image1"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image2"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image3"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image4"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image5"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image6"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image7"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image8"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-			</swiper>
-		</section>
-		<section class="meet">
-			<h4>Meet Master Cho</h4>
-			<div class="profile"></div>
-		</section>
-		<section class="schedule">
-			<h2>Schedule</h2>
-			<div class="picture"></div>
-		</section>
-		<section class="visit">
-			<h4>Come visit our dojang!</h4>
-			<div class="location">
-				<img src="../assets/pin.svg" alt="" class="pin">
-				<h5>Bay Ridge, Brooklyn</h5>
-			</div>
+			<VueSlickCarousel v-bind="settings">
+				<div><h3>1</h3></div>
+				/*...*/
+			</VueSlickCarousel>
 		</section>
 	</div>
 </template>
@@ -114,6 +39,21 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+export default {
+	data() {
+		return {
+			settings: {
+				dots: true,
+				dotsClass: "slick-dots custom-dot-class",
+				edgeFriction: 0.35,
+				infinite: false,
+				speed: 500,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+			},
+		};
+	},
+};
 </script>
 
 <style scoped>
@@ -129,7 +69,7 @@ import "swiper/css/pagination";
 		flex-direction: column;
 		justify-content: center;
 		align-items: start;
-		color: #fff
+		color: #fff;
 	}
 
 	.flag {
