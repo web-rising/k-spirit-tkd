@@ -1,7 +1,7 @@
 <template>
 	<div class="hamburger" v-show="isOpenBuger">
 		<div class="hamburger-container">
-			<div class="logo"></div>
+			<router-link to="/"><div class="logo"></div></router-link>
 			<div class="burger">
 				<img
 					class="close"
