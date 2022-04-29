@@ -10,7 +10,8 @@
     "@prismicio/vue": "^3.0.0-beta.5",
     "swiper": "^8.1.4",
     "vue": "^3.2.33",
-    "vue-router": "^4.0.14"
+    "vue-router": "^4.0.14",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",

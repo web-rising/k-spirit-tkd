@@ -10,7 +10,6 @@ console.log(homepage);
 	<div class="home">
 		<section class="splash">
 			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
-
 			<div class="mask"></div>
 			<div class="splash-text">
 				<h1>"Make the impossible possible."</h1>

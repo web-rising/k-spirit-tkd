@@ -1,7 +1,7 @@
 <template>
 	<div class="app">
-		<Nav/>
-		<router-view/>
+		<Nav />
+		<router-view />
 		<!-- <Footer
 		:email="$prismic.asText(contact.data.email)"
 		:telephone="$prismic.asText(contact.data.telephone)"
@@ -11,14 +11,17 @@
 </template>
 
 <script>
-import Nav from "./components/Nav.vue"
+import Nav from "./components/Nav.vue";
+
 // import Footer from "./components/Footer.vue"
 
 export default {
 	components: {
 		Nav,
-    // Footer
-},
-}
 
+		// Footer
+	},
+};
 </script>
+
+<style scoped></style>
