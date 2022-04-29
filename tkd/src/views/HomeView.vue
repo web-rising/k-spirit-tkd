@@ -35,7 +35,7 @@ const { data: contact } = useSinglePrismicDocument("footer");
 			>
 				<swiper-slide
 					><prismic-image
-						:field="homepage.data.image1"
+						:field="homepage.data.image5"
 						class="image"
 					></prismic-image
 				></swiper-slide>
