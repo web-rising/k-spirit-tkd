@@ -2,7 +2,6 @@
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
-const { data: contact } = useSinglePrismicDocument("footer");
 console.log(homepage);
 </script>
 
@@ -129,7 +128,7 @@ import "swiper/css/pagination";
 		flex-direction: column;
 		justify-content: center;
 		align-items: start;
-		color: #fff
+		color: #fff;
 	}
 
 	.flag {
