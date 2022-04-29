@@ -101,7 +101,7 @@ console.log(homepage);
 		<section class="visit">
 			<h4>Come visit our dojang!</h4>
 			<div class="location">
-				<img src="../assets/pin.svg" alt="" class="pin">
+				<img src="../assets/pin.svg" alt="" class="pin" />
 				<h5>Bay Ridge, Brooklyn</h5>
 			</div>
 		</section>
@@ -109,11 +109,30 @@ console.log(homepage);
 </template>
 
 <script>
+// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Pagination, Navigation } from "swiper";
+
+// Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+
+export default {
+	components: {
+		Swiper,
+		SwiperSlide,
+	},
+	setup() {
+		const onSwiper = (swiper) => {
+			console.log(swiper);
+		};
+		const onSlideChange = () => {
+			console.log("slide change");
+		};
+		return {
+			onSwiper,
+			onSlideChange,
+		};
+	},
+};
 </script>
 
 <style scoped>
@@ -129,7 +148,7 @@ import "swiper/css/pagination";
 		flex-direction: column;
 		justify-content: center;
 		align-items: start;
-		color: #fff
+		color: #fff;
 	}
 
 	.flag {
