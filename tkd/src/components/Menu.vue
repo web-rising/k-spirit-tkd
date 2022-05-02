@@ -1,8 +1,8 @@
 <script setup>
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
-const { data: contact } = useSinglePrismicDocument("contact");
-console.log(homepage);
+const { data: contact } = useSinglePrismicDocument("footer");
+console.log(contact);
 </script>
 
 <template>
@@ -10,12 +10,7 @@ console.log(homepage);
 		<div class="hamburger-container">
 			<router-link to="/"><div class="logo"></div></router-link>
 			<div class="burger">
-				<img
-					class="close"
-					src="../assets/close.svg"
-					alt=""
-					@click="closeBuger"
-				/>
+				<img class="close" src="../assets/close.svg" alt="" @click="closeBuger"/>
 			</div>
 			<ul class="nav-list">
 				<li>
@@ -35,7 +30,16 @@ console.log(homepage);
 				</li>
 			</ul>
 			<div class="footer">
-				
+				<p>Telephone</p>
+				<p>Email</p>
+				<p>Address</p>
+				<div class="media">
+					<img class="fb" src="../assets/facebook.svg" alt=""/>
+					<img class="ig" src="../assets/instagram.svg" alt=""/>
+				</div>
+				<!-- <p>{{$prismic.asText(contact.data.number)}}</p>
+				<p>{{$prismic.asText(contact.data.email)}}</p>
+				<p>{{$prismic.asText(contact.data.address)}}</p> -->
 			</div>
 		</div>
 	</div>
@@ -142,5 +146,34 @@ export default {
 .nav-list li a:hover {
   /* text-decoration: underline; */
   color: red;
+}
+
+.footer{
+	position: absolute;
+	margin: 1.3rem;
+	bottom: 0rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+}
+
+.media {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.fb {
+	width: 3rem;
+	height: 3rem;
+	object-fit: cover;
+	margin: 0.5rem 0;
+	margin-right: 1.5rem;
+}
+.ig {
+	width: 3rem;
+	height: 3rem;
+	object-fit: cover;
 }
 </style>
