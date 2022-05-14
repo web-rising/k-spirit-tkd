@@ -9,7 +9,7 @@ console.log(homepage);
 <template>
 	<div class="home">
 		<section class="splash">
-			<prismic-image :field="homepage.data.splash" class="flag"></prismic-image>
+			<!-- <prismic-image :field="homepage.data.splash" class="flag"></prismic-image> -->
 			<div class="mask"></div>
 			<div class="splash-text">
 				<h1>"Make the impossible possible."</h1>
@@ -25,32 +25,65 @@ console.log(homepage);
 			</div>
 		</section>
 		<section class="gallery">
-			<VueSlickCarousel v-bind="settings">
-				<div><h3>1</h3></div>
-				/*...*/
-			</VueSlickCarousel>
+			<swiper
+				:slides-per-view="1"
+				:space-between="50"
+				@swiper="onSwiper"
+				@slideChange="onSlideChange"
+			>
+				<swiper-slide
+					><img
+						src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/One-Piece-Character-Guide.jpg"
+						alt=""
+				/></swiper-slide>
+				<swiper-slide
+					><img
+						src="https://static1.colliderimages.com/wordpress/wp-content/uploads/2021/11/One-Piece-Character-Guide.jpg"
+						alt=""
+				/></swiper-slide>
+				<swiper-slide>Slide 3</swiper-slide>
+			</swiper>
+		</section>
+		<section class="meet">
+			<h4>Meet Master Cho</h4>
+			<div class="profile"></div>
+		</section>
+		<section class="schedule">
+			<h2>Schedule</h2>
+			<div class="picture"></div>
+		</section>
+		<section class="visit">
+			<h4>Come visit our dojang!</h4>
+			<div class="location">
+				<img src="../assets/pin.svg" alt="" class="pin" />
+				<h5>Bay Ridge, Brooklyn</h5>
+			</div>
 		</section>
 	</div>
 </template>
 
 <script>
+// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { Autoplay, Pagination, Navigation } from "swiper";
+
+// Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+
 export default {
-	data() {
+	components: {
+		Swiper,
+		SwiperSlide,
+	},
+	setup() {
+		const onSwiper = (swiper) => {
+			console.log(swiper);
+		};
+		const onSlideChange = () => {
+			console.log("slide change");
+		};
 		return {
-			settings: {
-				dots: true,
-				dotsClass: "slick-dots custom-dot-class",
-				edgeFriction: 0.35,
-				infinite: false,
-				speed: 500,
-				slidesToShow: 1,
-				slidesToScroll: 1,
-			},
+			onSwiper,
+			onSlideChange,
 		};
 	},
 };
