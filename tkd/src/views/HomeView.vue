@@ -2,7 +2,7 @@
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
-console.log(homepage);
+const {data: updates} = useSinglePrismicDocument("updates")
 </script>
 
 <template>
@@ -18,7 +18,9 @@ console.log(homepage);
 		<section class="news">
 			<h2>News & Updates</h2>
 			<div class="news-container">
-				<div class="news-item"></div>
+				<div class="news-item">
+					
+				</div>
 				<div class="news-item"></div>
 				<div class="news-item"></div>
 			</div>

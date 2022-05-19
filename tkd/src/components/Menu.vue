@@ -2,7 +2,6 @@
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: contact } = useSinglePrismicDocument("footer");
-console.log(contact);
 </script>
 
 <template>
@@ -17,7 +16,7 @@ console.log(contact);
 					<router-link to="/about" @click="closeBuger">About Us</router-link>
 				</li>
 				<li>
-					<router-link to="/news" @click="closeBuger">News & Updates</router-link>
+					<router-link to="/updates" @click="closeBuger">News & Updates</router-link>
 				</li>
 				<li>
 					<router-link to="/schedule" @click="closeBuger">Schedule</router-link>

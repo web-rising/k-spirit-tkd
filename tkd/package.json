@@ -10,14 +10,12 @@
     "@prismicio/vue": "^3.0.0-beta.5",
     "swiper": "^8.1.4",
     "vue": "^3.2.33",
+    "vue-router": "^4.0.13",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
-    "@vueuse/head": "^0.7.6",
     "vite": "^2.9.5",
-    "vite-ssg": "^0.20.0",
-    "vite-ssg-sitemap": "^0.2.7",
-    "vue-router": "^4.0.13"
+    "vite-ssg-sitemap": "^0.2.7"
   }
 }
