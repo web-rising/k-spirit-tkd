@@ -7,7 +7,7 @@ const { data: classes } = useSinglePrismicDocument("classes");
 <template>
 <div>
   <div v-for="classData in classes.data.body[0].items" :key="classData" class="class-container">
-      <router-link :to="`/Classesinfo/${classData.classroute[0].text}`">
+      <router-link :to="`/classes/${classData.classroute[0].text}`">
         <prismic-image :field="classData.class1" id="image"></prismic-image>
       </router-link>
       <prismic-text :field="classData.classname" id="name"></prismic-text>
@@ -20,9 +20,7 @@ const { data: classes } = useSinglePrismicDocument("classes");
 
 <script>
 export default {
-computed:{
 
-}
 }
 </script>
 

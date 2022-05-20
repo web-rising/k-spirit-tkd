@@ -23,12 +23,6 @@ const router = createRouter({
 				import("../views/ClassesView.vue"),
 			children: classRoutes
 		},
-		{
-			path: "/Classinfo/:id",
-			name: "Classinfo",
-			component: () =>
-				import("../views/Classinfo.vue")
-		},
 	],
 });
 
