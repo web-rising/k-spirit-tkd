@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from "vue-router";
-import classRoutes from '../classes'
 
 const router = createRouter({
 	history: createWebHistory(),
@@ -21,7 +20,13 @@ const router = createRouter({
 			name: "Classes",
 			component: () =>
 				import("../views/ClassesView.vue"),
-			children: classRoutes
+		},
+		{
+			path: "/classes/:name",
+			name: "Class",
+			component: () =>
+				import("../components/Class.vue"),
+			props: true
 		},
 	],
 });
