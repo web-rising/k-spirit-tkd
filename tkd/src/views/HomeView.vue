@@ -18,8 +18,10 @@ const { data: homepage } = useSinglePrismicDocument("homepage");
 			<h2>News & Updates</h2>
 			<div class="news-container">
 				<div  v-for="update in this.updates" :key="update">
-				<p>{{update.items[0].title[0].text}}</p>
-				<p>{{update.items[0].updatetime}}</p>
+				<router-link to="/updates">
+					<h4>{{update.items[0].title[0].text}}</h4>
+					<h4>{{update.items[0].updatetime}}</h4>
+				</router-link>
 				</div>
 			</div>
 		</section>
