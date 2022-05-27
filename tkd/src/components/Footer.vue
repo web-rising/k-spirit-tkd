@@ -3,15 +3,14 @@
         <div class="container">
             <div class="contact">
                 <h5 class="email">{{email}}</h5>
-                <h5 class="telephone">{{telephone}}</h5>
+                <h5 class="number">{{number}}</h5>
                 <h5 class="address">{{address}}</h5>
+                <a class="facebook" :href="facebook" target="_blank">Facebook</a>
+                <a class="instagram" :href="instagram" target="_blank">Instagram</a>
             </div>
             <ul class="nav-list">
                 <li>
                     <router-link to="/about">About Us</router-link>
-                </li>
-                <li>
-                    <router-link to="/schedule">Schedule</router-link>
                 </li>
                 <li>
                     <router-link to="/classes">Classes</router-link>                
@@ -21,19 +20,20 @@
                 </li>
             </ul>
             </div>
-        <h6 class="web-rising">Made with ❤️ by <a href="https://youtube.com" target="_blank">WebRising</a></h6>
+        <h6 class="web-rising">Made with ❤️ by <a href="https://webrising.org" target="_blank">WebRising</a></h6>
         <h6 class="copyright">Copyright 2022 WebRising All Rights Reserved</h6>
     </div>
 </template>
 
 <script>
-console.log('hey')
 export default {
-    name: "footer",
+    name: "Footer",
     props: {
         email: String,
-        telephone: String,
-        address: String
+        number: String,
+        address: String,
+        facebook: String,
+        instagram: String
     }
 }
 </script>

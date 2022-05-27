@@ -2,7 +2,6 @@
 import { useSinglePrismicDocument } from "@prismicio/vue";
 
 const { data: homepage } = useSinglePrismicDocument("homepage");
-const {data: updates} = useSinglePrismicDocument("updates")
 </script>
 
 <template>
@@ -18,11 +17,10 @@ const {data: updates} = useSinglePrismicDocument("updates")
 		<section class="news">
 			<h2>News & Updates</h2>
 			<div class="news-container">
-				<div class="news-item">
-					
+				<div  v-for="update in this.updates" :key="update">
+				<p>{{update.items[0].title[0].text}}</p>
+				<p>{{update.items[0].updatetime}}</p>
 				</div>
-				<div class="news-item"></div>
-				<div class="news-item"></div>
 			</div>
 		</section>
 		<section class="gallery">
@@ -115,6 +113,15 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import limitQuery from '../prismicHelpers/updates'
+
+export default {
+data() {
+	return {
+		updates: limitQuery(3)
+	}
+}
+}
 </script>
 
 <style scoped>

@@ -7,7 +7,7 @@ const { data: contact } = useSinglePrismicDocument("footer");
 <template>
 	<div class="hamburger" v-show="isOpenBuger">
 		<div class="hamburger-container">
-			<router-link to="/"><div class="logo"></div></router-link>
+			<router-link to="/" @click="closeBuger"><div class="logo"></div></router-link>
 			<div class="burger">
 				<img class="close" src="../assets/close.svg" alt="" @click="closeBuger"/>
 			</div>
@@ -19,13 +19,13 @@ const { data: contact } = useSinglePrismicDocument("footer");
 					<router-link to="/updates" @click="closeBuger">News & Updates</router-link>
 				</li>
 				<li>
-					<router-link to="/schedule" @click="closeBuger">Schedule</router-link>
-				</li>
-				<li>
 					<router-link to="/classes" @click="closeBuger">Classes</router-link>
 				</li>
 				<li>
 					<router-link to="/gallery" @click="closeBuger">Gallery</router-link>
+				</li>
+				<li>
+					<router-link to="/contact" @click="closeBuger">Contact Us</router-link>
 				</li>
 			</ul>
 			<div class="footer">

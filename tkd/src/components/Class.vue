@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import classes from '../classes'
+import classes from '../prismicHelpers/classes'
 
 export default {
     name: "Class",

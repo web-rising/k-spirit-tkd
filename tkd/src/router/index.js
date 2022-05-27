@@ -16,6 +16,12 @@ const router = createRouter({
 				import("../views/UpdatesView.vue"),
 		},
 		{
+			path: "/about",
+			name: "About",
+			component: () =>
+				import("../views/AboutView.vue"),
+		},
+		{
 			path: "/classes",
 			name: "Classes",
 			component: () =>
@@ -27,6 +33,18 @@ const router = createRouter({
 			component: () =>
 				import("../components/Class.vue"),
 			props: true
+		},
+		{
+			path: "/gallery",
+			name: "Gallery",
+			component: () =>
+				import("../views/GalleryView.vue"),
+		},
+		{
+			path: "/contact",
+			name: "Contact",
+			component: () =>
+				import("../views/ContactView.vue"),
 		},
 	],
 });
