@@ -18,9 +18,6 @@
 				<li>
 					<router-link to="/gallery" @click="closeBuger">Gallery</router-link>
 				</li>
-				<li>
-					<router-link to="/contact" @click="closeBuger">Contact Us</router-link>
-				</li>
 			</ul>
 			<div class="footer">
 				<!-- <p>Telephone</p>
