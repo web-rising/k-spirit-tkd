@@ -1,9 +1,3 @@
-<script setup>
-import { useSinglePrismicDocument } from "@prismicio/vue";
-
-const { data: contact } = useSinglePrismicDocument("footer");
-</script>
-
 <template>
 	<div class="hamburger" v-show="isOpenBuger">
 		<div class="hamburger-container">
@@ -29,26 +23,31 @@ const { data: contact } = useSinglePrismicDocument("footer");
 				</li>
 			</ul>
 			<div class="footer">
-				<p>Telephone</p>
+				<!-- <p>Telephone</p>
 				<p>Email</p>
-				<p>Address</p>
+				<p>Address</p> -->
+				<p>{{this.data.number[0].text}}</p>
+				<p>{{this.data.email[0].text}}</p>
+				<p>{{this.data.address[0].text}}</p>
 				<div class="media">
-					<img class="fb" src="../assets/facebook.svg" alt=""/>
-					<img class="ig" src="../assets/instagram.svg" alt=""/>
+					<a :href="this.data.facebook.url" target="_blank"><img class="fb" src="../assets/facebook.svg" alt=""/></a>
+					<a :href="this.data.instagram.url" target="_blank"><img class="ig" src="../assets/instagram.svg" alt=""/></a>
 				</div>
-				<!-- <p>{{$prismic.asText(contact.data.number)}}</p>
-				<p>{{$prismic.asText(contact.data.email)}}</p>
-				<p>{{$prismic.asText(contact.data.address)}}</p> -->
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import footer from '../prismicHelpers/footer.js'
+console.log(footer)
+
 export default {
 	name: "Menu",
 	data() {
-		return {};
+		return {
+			data: footer
+		};
 	},
 	methods: {
 		closeBuger: function () {

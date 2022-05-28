@@ -13,12 +13,12 @@
 </template>
 
 <script>
-import limitQuery from '../prismicHelpers/updates.js'
+import limitUpdates from '../prismicHelpers/updates.js'
 
 export default {
   data() {
     return {
-		  updates: limitQuery(10)
+		  updates: limitUpdates(10)
     }
   }
 }
