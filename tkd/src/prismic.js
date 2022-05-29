@@ -13,6 +13,10 @@ const prismic = createPrismic({
 					type: "footer",
 					path: "/",
 				},
+				// {
+				// 	type: "classes",
+				// 	path: "/classes",
+				// },
 			],
 		},
 		accessToken: import.meta.env.VITE_ACCESSTOKEN
