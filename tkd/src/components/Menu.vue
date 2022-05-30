@@ -23,9 +23,10 @@
 				<!-- <p>Telephone</p>
 				<p>Email</p>
 				<p>Address</p> -->
+				<h5>K-Spirit Taekwondo</h5>
+				<p>{{this.data.address[0].text}}</p>
 				<p>{{this.data.number[0].text}}</p>
 				<p>{{this.data.email[0].text}}</p>
-				<p>{{this.data.address[0].text}}</p>
 				<div class="media">
 					<a :href="this.data.facebook.url" target="_blank"><img class="fb" src="../assets/facebook.svg" alt=""/></a>
 					<a :href="this.data.instagram.url" target="_blank"><img class="ig" src="../assets/instagram.svg" alt=""/></a>
@@ -122,7 +123,7 @@ export default {
   align-items: start;
   justify-content: center;
   margin: 1.3rem;
-  margin-top: 20vh;
+  margin-top: 22vh;
 }
 
 .nav-list li {
@@ -153,7 +154,13 @@ export default {
 	justify-content: center;
 }
 
+.footer h5, p {
+	padding: 0.3rem 0.5rem;
+}
+
 .media {
+	padding: 0 0.5rem;
+	padding-top: 0.4rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;

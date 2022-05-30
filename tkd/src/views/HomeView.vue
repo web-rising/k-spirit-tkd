@@ -63,7 +63,10 @@ const { data: homepage } = useSinglePrismicDocument("homepage");
 			<h4>Come visit our dojang!</h4>
 			<div class="location">
 				<img src="../assets/pin.svg" alt="" class="pin">
-				<h5>Bay Ridge, Brooklyn</h5>
+				<div class="location-text">
+					<h5>Bay Ridge</h5>
+					<p>8020 5th Ave, Brooklyn, NY 11209</p>
+				</div>
 			</div>
 		</section>
 	</div>
@@ -175,7 +178,7 @@ data() {
 		background-color: #151515;
 	}
 	.schedule {
-		height: 32vh;
+		height: 36vh;
 		width: 100%;
 		display: flex;
 		flex-direction: column;
@@ -184,7 +187,7 @@ data() {
 	}
 	.picture {
 		width: 90%;
-		height: 15rem;
+		height: 18rem;
 		background-color: #151515;
 	}
 
@@ -201,7 +204,23 @@ data() {
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-between;
+		margin-top: 1rem;
+	}
+	.location img {
+		height: 3rem;
+		width: auto;
+		margin-right: 0.5rem;
+	}
+
+	.location-text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+	}
+	.location-text p {
+		font-size: 1rem;
 	}
 }
 </style>

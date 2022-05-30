@@ -13,18 +13,22 @@
                     <router-link to="/gallery">Gallery</router-link>                
                 </li>
             </ul> -->
-        <div class="contact-container">
-            <h5 class="contact">K-Spirit Taekwondo</h5>
-            <h5 class="contact">{{address}}</h5>
-            <h5 class="contact">{{number}}</h5>
-            <h5 class="contact">{{email}}</h5>
+        <div class="contact">
+            <div class="logo"></div>
+            <h5>K-Spirit Taekwondo</h5>
+            <p>{{address}}</p>
+            <p>{{number}}</p>
+            <p>{{email}}</p>
         </div>
-        <div class="social-container">
-            <a class="social" :href="facebook" target="_blank">Facebook</a>
-            <span class="social-dot">&#x2022;</span>
-            <a class="social" :href="instagram" target="_blank">Instagram</a>
+        <div class="social">
+            <a :href="facebook" target="_blank">Facebook</a>
+            <span class="dot">&#x2022;</span>
+            <a :href="instagram" target="_blank">Instagram</a>
         </div>
-            <h6 class="copyright">Copyright 2022 <a class="site" href="https://webrising.org" target="_blank">WebRising</a> All Rights Reserved</h6>
+        <div class="webrising">
+            <p>Made with &lt;3 by <a class="site" href="https://webrising.org" target="_blank">WebRising</a></p>
+            <h6 class="copyright">Copyright 2022 Webrising All Rights Reserved</h6>
+        </div>
     </div>
 </template>
 
@@ -42,21 +46,36 @@ export default {
 </script>
 
 <style scoped>
-* {
+.footer {
     text-decoration: none;
-    color: #fff
+    height: 45vh;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
 }
 
-.nav-list {
+.contact {
+    margin-top: 1rem;
+}
+.logo {
+	height: 4rem;
+	width: 4rem;
+	border-radius: 2rem;
+	background-color: #fff;
+	position: relative;
+    margin: 1rem 1.5rem;
+}
+
+/* .nav-list {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
     align-items: center;
     margin-top: 1rem;
     margin-left: 1rem;
 }
 
-li {
+.nav-list li {
     font-size: 1.5rem;
 }
 
@@ -64,7 +83,7 @@ li {
     font-size: 1rem;
     margin-left: 1rem;
     margin-right: 1rem
-}
+} */
 
 .footer {
     background-color: #151515;
@@ -72,28 +91,37 @@ li {
     flex-direction: column;
 }
 
-.contact {
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+.contact h5, p {
+    margin: 0.6rem 1.5rem;
 }
 
-.social-container {
+.social {
     display: flex;
     align-items: center;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 }
 
-.social-dot {
-    font-size: 0.5rem;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem
+.social a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
+.dot {
+    font-size: 1rem;
+    margin: 0 1rem;
+    color: #fff;
+}
+.webrising {
+    margin-bottom: 1.5rem;
+}
+.webrising a {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Kumbh Sans', sans-serif;
+}
 .copyright {
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
+    margin: 0 1.5rem;
+    color: #a1a1a1;
 }
-
 </style>
