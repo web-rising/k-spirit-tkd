@@ -9,7 +9,14 @@ const { data: about } = useSinglePrismicDocument("about");
 </template>
 
 <script>
+import limitImages from '../prismicHelpers/gallery'
+
 export default {
+  data() {
+    return {
+      images: limitImages(12)
+    }
+  }
 
 }
 </script>

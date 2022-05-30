@@ -39,56 +39,16 @@ const { data: homepage } = useSinglePrismicDocument("homepage");
 				:autoplay="{
 					delay: 3000,
 					disableOnInteraction: false,
-				}"
-			>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image1"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image2"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image3"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image4"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image5"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image6"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image7"
-						class="image"
-					></prismic-image
-				></swiper-slide>
-				<swiper-slide
-					><prismic-image
-						:field="homepage.data.image8"
-						class="image"
-					></prismic-image
-				></swiper-slide>
+				}">
+				
+				<swiper-slide v-for="image in this.galleryImages" :key="image">
+					<router-link to="/gallery">
+						<prismic-image
+							:field="image.image"
+							id="image"
+						></prismic-image>
+					</router-link>
+				</swiper-slide>
 			</swiper>
 		</section>
 		<section class="meet">
@@ -115,12 +75,14 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import limitQuery from '../prismicHelpers/updates'
+import limitUpdates from '../prismicHelpers/updates'
+import limitImages from '../prismicHelpers/gallery.js'
 
 export default {
 data() {
 	return {
-		updates: limitQuery(3)
+		updates: limitUpdates(3),
+		galleryImages: limitImages(5)
 	}
 }
 }
@@ -190,12 +152,13 @@ data() {
 		object-fit: cover;
 		display: flex;
 		justify-content: center;
-		background-color: #151515;
+		/* background-color: #151515; */
 		/* align-items: center; */
 	}
 
-	.image {
+	#image {
 		width: 100%;
+		object-fit: cover;
 	}
 	.meet {
 		height: 25vh;
