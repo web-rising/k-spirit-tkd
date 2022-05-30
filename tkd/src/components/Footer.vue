@@ -1,6 +1,6 @@
 <template>
     <div class="footer">
-         <ul class="nav-list">
+         <!-- <ul class="nav-list">
                 <li>
                     <router-link to="/about">About Us</router-link>
                 </li>
@@ -12,16 +12,17 @@
                 <li>
                     <router-link to="/gallery">Gallery</router-link>                
                 </li>
-            </ul>
+            </ul> -->
+        <div class="contact-container">
+            <h5 class="contact">K-Spirit Taekwondo</h5>
+            <h5 class="contact">{{address}}</h5>
+            <h5 class="contact">{{number}}</h5>
+            <h5 class="contact">{{email}}</h5>
+        </div>
         <div class="social-container">
             <a class="social" :href="facebook" target="_blank">Facebook</a>
             <span class="social-dot">&#x2022;</span>
             <a class="social" :href="instagram" target="_blank">Instagram</a>
-        </div>
-        <div class="contact-container">
-            <h5 class="contact">{{email}}</h5>
-            <h5 class="contact">{{number}}</h5>
-            <h5 class="contact">{{address}}</h5>
         </div>
             <h6 class="copyright">Copyright 2022 <a class="site" href="https://webrising.org" target="_blank">WebRising</a> All Rights Reserved</h6>
     </div>
