@@ -58,7 +58,8 @@ h4,
 h5,
 h6,
 p,
-li {
+li,
+div {
 	/* font-family: "Avenir", Helvetica, sans-serif; */
 	font-family: 'Kumbh Sans', sans-serif;
 

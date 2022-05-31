@@ -1,10 +1,11 @@
 <template>
-<div>
+<div class="container">
+  <h2>{{this.classData.classname[0].text}} | Ages: {{this.classData.agegroup[0].text}}</h2>
   <div class="class-container">
       <prismic-image :field="this.classData.class1" id="image"></prismic-image>
-      <prismic-text :field="this.classData.classname" id="name"></prismic-text>
-      <prismic-text :field="this.classData.agegroup" id="age"></prismic-text>
-      <prismic-text :field="this.classData.classtimes" id="times"></prismic-text>
+      <div class="times">
+      <p v-for="time in this.classData.classtimes" id="time" :key="time">{{time.text}}</p>
+      </div>
       <prismic-text :field="this.classData.classdescription" id="description"></prismic-text>
   </div>
 </div>
@@ -28,9 +29,22 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+
+.container {
+  margin-top: 4rem;
+  padding: 1rem;
+}
+
 #image {
   width: 100%
 }
+
+.times {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
 
 </style>
