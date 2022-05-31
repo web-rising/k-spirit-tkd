@@ -48,7 +48,7 @@ export default {
 <style scoped>
 .footer {
     text-decoration: none;
-    height: 45vh;
+    height: 44vh;
     color: #fff;
     display: flex;
     justify-content: space-between;
