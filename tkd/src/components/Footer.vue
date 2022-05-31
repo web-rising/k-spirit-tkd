@@ -1,18 +1,5 @@
 <template>
     <div class="footer">
-         <!-- <ul class="nav-list">
-                <li>
-                    <router-link to="/about">About Us</router-link>
-                </li>
-                <span class="nav-dot">&#x2022;</span>
-                <li>
-                    <router-link to="/classes">Classes</router-link>                
-                </li>
-                <span class="nav-dot">&#x2022;</span>
-                <li>
-                    <router-link to="/gallery">Gallery</router-link>                
-                </li>
-            </ul> -->
         <div class="contact">
             <div class="logo"></div>
             <h5>K-Spirit Taekwondo</h5>
@@ -26,7 +13,7 @@
             <a :href="instagram" target="_blank">Instagram</a>
         </div>
         <div class="webrising">
-            <p>Made with &lt;3 by <a class="site" href="https://webrising.org" target="_blank">WebRising</a></p>
+            <p>Crafted with ❤️ by <a class="site" href="https://webrising.org" target="_blank">WebRising</a></p>
             <h6 class="copyright">Copyright 2022 Webrising All Rights Reserved</h6>
         </div>
     </div>
@@ -63,7 +50,7 @@ export default {
 	width: 4rem;
 	border-radius: 2rem;
 	background-color: #fff;
-	position: relative;
+	/* position: relative; */
     margin: 1rem 1.5rem;
 }
 
@@ -96,8 +83,6 @@ export default {
 }
 
 .social {
-    display: flex;
-    align-items: center;
     margin-left: 1.5rem;
 }
 
@@ -124,4 +109,9 @@ export default {
     margin: 0 1.5rem;
     color: #a1a1a1;
 }
+
+@media (min-width: 600px) {
+
+}
+
 </style>

@@ -4,6 +4,12 @@
 		<div class="burger">
 			<img class="menu" src="../assets/menu.svg" alt="" @click="openBurger" />
 		</div>
+		<ul class="nav-list">
+			<li><router-link to="/about"></router-link></li>
+			<li><router-link to="/updates"></router-link></li>
+			<li><router-link to="/classes"></router-link></li>
+			<li><router-link to="/gallery"></router-link></li>
+		</ul>
 		<Menu />
 	</div>
 </template>
@@ -67,4 +73,15 @@ export default {
 	width: 1.8rem;
 	/* display: none; */
 }
+
+@media (min-width: 600px) {
+	.burger {
+		opacity: 0;
+	}
+	.nav-list {
+		height: 3rem;
+		width: 60%;
+	}
+}
+
 </style>
