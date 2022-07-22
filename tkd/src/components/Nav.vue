@@ -5,10 +5,10 @@
 			<img class="menu" src="../assets/menu.svg" alt="" @click="openBurger" />
 		</div>
 		<ul class="nav-list">
-			<li><router-link to="/about"></router-link></li>
-			<li><router-link to="/updates"></router-link></li>
-			<li><router-link to="/classes"></router-link></li>
-			<li><router-link to="/gallery"></router-link></li>
+			<li><router-link to="/about" class="btn">About</router-link></li>
+			<li><router-link to="/updates" class="btn">Updates</router-link></li>
+			<li><router-link to="/classes" class="btn">Classes</router-link></li>
+			<li><router-link to="/gallery" class="btn">Gallery</router-link></li>
 		</ul>
 		<Menu />
 	</div>
@@ -30,6 +30,7 @@ export default {
 </script>
 
 <style scoped>
+
 .nav {
 	position: absolute;
 	top: 0;
@@ -62,7 +63,6 @@ export default {
 	justify-content: center;
 	align-items: center;
 	background-color: #fff;
-	/* margin-left: 5rem; */
 	overflow: hidden;
 	cursor: pointer;
 }
@@ -74,13 +74,32 @@ export default {
 	/* display: none; */
 }
 
+.nav-list {
+	display: none;
+}
+
+.btn:hover {
+	color: #cd2e3a;
+	transition: all .2s ease;
+}
+
 @media (min-width: 600px) {
 	.burger {
-		opacity: 0;
+		display: none;
 	}
 	.nav-list {
-		height: 3rem;
-		width: 60%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: space-between;
+		width: 50%;
+	}
+	.btn {
+		list-style: none;
+		font-size: 1.2rem;
+		text-decoration: none;
+		color: #000;
 	}
 }
 
