@@ -1,11 +1,11 @@
 <template>
   <div>
     <Nav />
-    <div class="mt-[4rem]">
-      <div id="master" class="flex flex-col items-center justify-center">
+    <div class="mt-[4rem] flex flex-col items-center">
+      <div id="master" class="flex flex-col items-center justify-center mb-8 max-w-4xl">
         <prismic-image :field="document.cho" id="cho-image" class="rounded-full h-56 w-56 object-cover"></prismic-image>
-        <h3>Master Hyuk Jin Cho</h3>
-        <prismic-rich-text :field="document.mission" id="mission" class="mx-4"></prismic-rich-text>
+        <h2 class="font-semibold">Master Hyuk Jin Cho</h2>
+        <p id="mission" class="text-xl text-center mx-8">{{ document.mission[0].text }}</p>
       </div>
       <Footer :data="footer" />
     </div>
