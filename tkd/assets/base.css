@@ -1,64 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+  /* fonts */
+  --font-main: 'Kumbh Sans', sans-serif;
+  --weight: 500;
+
+  /* colors */
+  --bg-color: #000;
+  --text-color: #fff;
+
+  font-synthesis: none;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
 
 *,
-html {
-	/* font-family: Avenir, Helvetica, Arial, sans-serif; */
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	/* text-align: center; */
-
-	scroll-behavior: smooth;
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-	overflow-x: hidden;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
-	background-color: #fff;
-	color: #151515;
+  color: var(--bg-color);
+  background-color: var(--text-color);
 }
 
-h1 {
-  font-size: 3.6rem;
-}
-h2 {
-  font-size: 2.4rem;
-}
-h3 {
-  font-size: 2rem;
-}
-h4 {
-	font-size: 1.6rem;
-}
-h5 {
-	font-size: 1.2rem;
+.dark {
+  color: var(--text-color);
+  background-color: var(--bg-color);
 }
 
-li {
-	font-size: 2.4rem;
-}
-
-p {
-	font-size: 1.2rem;
-}
-h6 {
-	font-size: 0.8rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
 p,
+a,
 li,
-div {
-	/* font-family: "Avenir", Helvetica, sans-serif; */
-	font-family: 'Kumbh Sans', sans-serif;
-	/* font-family: 'Noto Sans', sans-serif; */
+div,
+button,
+label,
+input,
+textarea {
+  font-family: var(--font-main);
+  font-weight: var(--weight);
+  line-height: 1.25;
+  text-decoration: none;
 }
+
+/* h1 {
+  font-size: 2.488rem;
+}
+
+h2 {
+  font-size: 2.074rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+p,
+a,
+li,
+button,
+label,
+input,
+textarea {
+  font-size: 1rem;
+}
+
+small {
+  font-size: 0.833rem;
+} */

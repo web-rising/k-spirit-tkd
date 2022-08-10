@@ -2,7 +2,7 @@
   <div id="home">
     <Nav />
     <div class="flex flex-col space-y-12">
-      <section id="mobile-splash" class="h-5/6 w-full overflow-hidden flex flex-col justify-center mt-[4rem] lg:hidden">
+      <section id="mobile-splash" class="h-full w-full overflow-hidden flex flex-col justify-center mt-[4rem] lg:hidden">
         <img class="" src="@/assets/waves.svg" alt="" />
         <div id="" class="text-center -mt-16">
           <h2 class="font-bold sm:text-5xl md:text-6xl md:mb-4">K-Spirit Taekwondo</h2>

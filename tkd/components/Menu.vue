@@ -1,8 +1,8 @@
 <template>
-  <div class="hamburger" v-if="menuOpen">
-    <nav />
-    <div class="hamburger-container">
-      <ul class="nav-list">
+  <div id="hamburger" v-if="menuOpen" class="fixed inset-0 z-30">
+    <!-- <Nav /> -->
+    <div id="hamburger-container" class="bg-white relative w-full h-screen flex justify-start items-center px-14">
+      <ul id="nav-list" class="flex flex-col justify-center items-start space-y-6 text-4xl">
         <li>
           <nuxt-link to="/about" @click.native="toggleMenu">About Us</nuxt-link>
         </li>
