@@ -8,12 +8,12 @@
         <prismic-rich-text :field="data.number" />
         <prismic-rich-text :field="data.email" />
       </div>
-      <div class="hidden items-center grid-flow-row my-6 lg:block">
+      <div class="hidden items-center grid-flow-row my-6 md:block">
         <p class="text-lg font-semibold">Made with ❤️ by <a class="hover:text-red-500 ease-in duration-150 font-bold" href="https://webrising.org" target="_blank">WebRising</a></p>
         <p class="text-sm">Copyright © 2022 WebRising - All Rights Reserved</p>
       </div>
     </div>
-    <div class="lg:pt-4">
+    <div class="md:pt-4">
       <span class="footer-title">Socials</span>
       <div class="grid grid-flow-col gap-6">
         <a :href="data.facebook.url" class="ease-in duration-150 hover:opacity-80" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg
@@ -27,7 +27,7 @@
         </a>
       </div>
     </div>
-    <div class="hidden lg:block lg:pt-4">
+    <div class="hidden md:block md:pt-4 md:pl-12">
         <span class="footer-title">Pages</span>
         <ul class="flex flex-col justify-center items-start space-y-4 mt-2">
           <li><nuxt-link to="/about" class="text-lg ease-in duration-150 hover:opacity-80 ">About Us</nuxt-link></li>
@@ -36,7 +36,7 @@
           <li><nuxt-link to="/gallery" class="text-lg ease-in duration-150 hover:opacity-80">Gallery</nuxt-link></li>
         </ul>
     </div>
-    <div class="items-center grid-flow-row lg:hidden">
+    <div class="items-center grid-flow-row md:hidden">
       <p class="text-lg font-semibold">Made with ❤️ by <a class="hover:text-red-500 ease-in duration-150 font-bold" href="https://webrising.org" target="_blank">WebRising</a></p>
       <p class="text-sm">Copyright © 2022 WebRising - All Rights Reserved</p>
     </div>
