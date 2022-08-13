@@ -3,16 +3,16 @@
     <!-- <Nav /> -->
     <div id="hamburger-container" class="bg-white relative w-full h-screen flex justify-start items-center px-14">
       <ul id="nav-list" class="flex flex-col justify-center items-start space-y-6 text-4xl">
-        <li>
+        <li id="underline">
           <nuxt-link to="/about" @click.native="toggleMenu">About Us</nuxt-link>
         </li>
-        <li>
+        <li id="underline">
           <nuxt-link to="/updates" @click.native="toggleMenu">News & Updates</nuxt-link>
         </li>
-        <li>
+        <li id="underline">
           <nuxt-link to="/classes" @click.native="toggleMenu">Classes</nuxt-link>
         </li>
-        <li>
+        <li id="underline">
           <nuxt-link to="/gallery" @click.native="toggleMenu">Gallery</nuxt-link>
         </li>
       </ul>
@@ -31,12 +31,27 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+
 export default {
   name: 'Menu',
   data() {
     return {
       menuOpen: null,
     }
+  },
+  mounted() {
+    const tl = gsap.timeline({
+        defaults: {
+            duration: 1,
+        }
+    })
+
+    tl.from('#underline', {
+        x: -150, 
+        opacity: 0,
+        stagger: 0.2
+    }, '-=1.2')
   },
   methods: {
     toggleMenu: function () {

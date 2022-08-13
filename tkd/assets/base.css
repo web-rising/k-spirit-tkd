@@ -56,7 +56,7 @@ input,
 textarea {
   font-family: var(--font-main);
   font-weight: var(--weight);
-  line-height: 1.25;
+  line-height: 1.3;
   text-decoration: none;
 }
 
