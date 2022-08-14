@@ -2,10 +2,10 @@
   <div>
     <Nav :logo="footer.logo" />
 
-    <div class="mt-[4rem] flex flex-col items-center">
-      <div id="master" class="flex flex-col items-center justify-center mb-8 max-w-4xl">
+    <div class="mt-[5rem] flex flex-col items-center">
+      <div id="master" class="flex flex-col items-center justify-center mb-8 max-w-4xl space-y-3">
         <prismic-image :field="document.cho" id="cho-image" class="rounded-full h-56 w-56 object-cover"></prismic-image>
-        <h2 class="font-semibold">Master Hyuk Jin Cho</h2>
+        <h2 class="font-semibold text-4xl">Master Hyuk Jin Cho</h2>
         <p id="mission" class="text-xl text-center mx-8">{{ document.mission[0].text }}</p>
       </div>
       <Footer :data="footer" />

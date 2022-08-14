@@ -2,15 +2,15 @@
   <div>
     <Nav :logo="footer.logo" />
 
-    <div class="mt-[4rem]">
+    <div class="mt-[5rem]">
       <div>
-        <div class="flex text-center justify-center w-full">
-          <h2 class="font-semibold">News & Updates</h2>
+        <div class="flex text-center justify-center w-full mb-4">
+          <h2 class="font-semibold text-3xl">News & Updates</h2>
         </div>
-        <div class="flex flex-wrap justify-center items-center space-y-4 space-x-4 mb-8">
+        <div class="flex flex-wrap justify-center items-center space-y-6 md:space-x-6 pb-10">
           <div v-for="item in updates" :key="item.uploadtime" class="card w-96 bg-base-100 shadow-xl">
             <div class="card-body">
-              <h4 class="font-semibold">{{ item.title[0].text }}</h4>
+              <h4 class="font-semibold text-xl">{{ item.title[0].text }}</h4>
               <div class="badge badge-lg overflow-hidden">{{ item.updatetime }}</div>
               <p v-for="text in item.description" :key="text.text">{{ text.text }}</p>
             </div>

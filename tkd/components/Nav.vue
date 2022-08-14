@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="navbar bg-base-100 fixed top-0 left-0 w-full z-40 px-4 md:px-6 lg:px-10">
+    <div class="navbar bg-base-100 fixed top-0 left-0 w-full z-40 px-4 sm:px-6 md:px-2 lg:px-10">
       <div class="flex-1">
-        <nuxt-link to="/" id="home" class="btn btn-ghost normal-case flex space-x-2 text-xl md:text-2xl">
+        <nuxt-link to="/" id="home" class="btn btn-ghost normal-case flex space-x-2 text-xl md:text-2xl hover:bg-zinc-200">
           <prismic-image :field="logo" id="cho-image" class="h-full aspect-square rounded-full object-cover"></prismic-image>
           <li>K-Spirit Taekwondo</li>
         </nuxt-link>
         <!-- * make this the logo instead of this text * -->
       </div>
       <div class="flex-none md:hidden">
-        <label type="button" tabindex="0" class="btn btn-ghost rounded-full h-12 w-12 swap swap-rotate">
+        <label type="button" tabindex="0" class="btn btn-ghost rounded-full h-12 w-12 swap swap-rotate hover:bg-zinc-200">
           <input type="checkbox" @change="toggleMenu" :checked="$store.state.menuOpen" />
 
           <svg class="swap-off fill-current h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -22,10 +22,10 @@
       </div>
       <div class="flex-none hidden md:block">
         <ul class="menu menu-horizontal space-x-4">
-          <li><nuxt-link to="/about" class="text-lg rounded active:bg-white">About Us</nuxt-link></li>
-          <li><nuxt-link to="/updates" class="text-lg rounded active:bg-white">News & Updates</nuxt-link></li>
-          <li><nuxt-link to="/classes" class="text-lg rounded active:bg-white">Classes</nuxt-link></li>
-          <li><nuxt-link to="/gallery" class="text-lg rounded active:bg-white">Gallery</nuxt-link></li>
+          <li><nuxt-link to="/about" class="text-lg rounded-md active:bg-white">About Us</nuxt-link></li>
+          <li><nuxt-link to="/updates" class="text-lg rounded-md active:bg-white">News & Updates</nuxt-link></li>
+          <li><nuxt-link to="/classes" class="text-lg rounded-md active:bg-white">Classes</nuxt-link></li>
+          <li><nuxt-link to="/gallery" class="text-lg rounded-md active:bg-white">Gallery</nuxt-link></li>
         </ul>
       </div>
     </div>

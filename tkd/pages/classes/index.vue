@@ -4,9 +4,9 @@
 
     <div class="mt-[5rem]">
       <div class="flex text-center justify-center w-full mb-4">
-        <h2 class="font-semibold text-4xl">Classes</h2>
+        <h2 class="font-semibold text-3xl">Classes</h2>
       </div>
-      <div class="flex flex-wrap justify-center items-center space-y-6 space-x-6 pb-10">
+      <div class="flex flex-wrap justify-center items-center space-y-6 md:space-x-6 pb-10">
         <div v-for="item in classes" :key="item.classroute[0].text" class="card w-96 bg-base-100 shadow-xl">
           <figure><img :src="item.classimage.url" /></figure>
           <div class="card-body">
