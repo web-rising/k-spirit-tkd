@@ -2,14 +2,15 @@
   <div id="home">
     <Nav />
     <div class="flex flex-col space-y-12">
-      <section id="mobile-splash" class="h-full w-full overflow-hidden flex flex-col justify-center mt-[4rem] lg:hidden">
-        <img class="" src="@/assets/waves.svg" alt="" />
-        <div id="" class="text-center -mt-16">
-          <h2 class="font-bold sm:text-5xl md:text-6xl md:mb-4">K-Spirit Taekwondo</h2>
-          <h3 class="font-semibold md:text-4xl">"Make the impossible possible"</h3>
+      <section id="mobile-splash" class="h-full w-full overflow-hidden flex flex-col justify-center items-center mt-[4rem] lg:hidden">
+        <img class="w-full hidden md:block" src="@/assets/waves.svg" alt="" />
+        <img class="w-full md:hidden" src="@/assets/layered-waves-haikei.svg" alt="">
+        <div class="absolute text-center space-y-3 -mt-32 md:-mt-8">
+          <h2 class="overflow-visible font-bold text-white text-3xl sm:text-5xl md:text-6xl md:mb-4">K-Spirit Taekwondo</h2>
+          <h3 class="font-semibold text-white text-lg sm:text-2xl md:text-3xl">"Make the impossible possible"</h3>
         </div>
       </section>
-      <section id="splash" class="w-full h-[90vh] overflow-hidden flex-col justify-center relative hidden lg:flex">
+      <section id="splash" class="w-full h-[100vh] overflow-hidden flex-col justify-center relative hidden lg:flex">
         <img class="w-full object-cover object-center" src="@/assets/blob-scene-2.svg" alt="" />
         <div id="text" class="text-center absolute left-1/2 top-1/2">
           <h2 class="font-bold text-7xl p-3">K-Spirit Taekwondo</h2>
