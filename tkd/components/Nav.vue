@@ -47,4 +47,10 @@ export default {
 </script>
 
 <style>
+a.nuxt-link-exact-active {
+  color: rgb(239 68 68);
+}
+#home.nuxt-link-active {
+  color: black;
+}
 </style>
