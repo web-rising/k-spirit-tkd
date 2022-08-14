@@ -2,7 +2,7 @@
   <div>
     <div class="navbar bg-base-100 fixed top-0 left-0 w-full z-40 px-4 md:px-6 lg:px-10">
       <div class="flex-1">
-        <nuxt-link to="/" class="btn btn-ghost normal-case flex space-x-2 text-xl md:text-2xl">
+        <nuxt-link to="/" id="home" class="btn btn-ghost normal-case flex space-x-2 text-xl md:text-2xl">
           <prismic-image :field="logo" id="cho-image" class="h-full aspect-square rounded-full object-cover"></prismic-image>
           <li>K-Spirit Taekwondo</li>
         </nuxt-link>
