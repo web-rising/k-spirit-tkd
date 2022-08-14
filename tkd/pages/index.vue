@@ -1,6 +1,6 @@
 <template>
   <div id="home">
-    <Nav />
+    <Nav :logo="footer.logo" />
     <div class="flex flex-col space-y-12">
       <section id="mobile-splash" class="h-full w-full overflow-hidden flex flex-col justify-center mt-[4rem] lg:hidden">
         <img class="" src="@/assets/waves.svg" alt="" />
@@ -16,7 +16,7 @@
           <h3 class="font-semibold text-4xl p-2">"Make the impossible possible"</h3>
         </div>
       </section>
-      <section id="news" class="text-center items-center justify-center bg-slate-50 py-4">
+      <section id="news" class="text-center items-center justify-center py-4">
         <h2 class="font-semibold">News & Updates</h2>
         <HomeNews :items="updates[0].items" />
       </section>

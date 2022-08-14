@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Nav />
+    <Nav :logo="footer.logo" />
+
     <section class="overflow-hidden text-gray-700 mt-[4rem]">
       <div class="flex text-center justify-center w-full">
         <h2 class="font-semibold">Gallery</h2>

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Nav />
+    <Nav :logo="footer.logo" />
+
     <div class="mt-[4rem] flex flex-col items-center">
       <div id="master" class="flex flex-col items-center justify-center mb-8 max-w-4xl">
         <prismic-image :field="document.cho" id="cho-image" class="rounded-full h-56 w-56 object-cover"></prismic-image>

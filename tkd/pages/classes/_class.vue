@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Nav />
+    <Nav :logo="footer.logo" />
+
     <div>
       <div class="mt-[4rem] hero min-h-screen bg-base-200">
         <div class="hero-content flex-col lg:flex-row">

@@ -1,10 +1,11 @@
 <template>
   <div>
-    <Nav />
+    <Nav :logo="footer.logo" />
+
     <div class="mt-[4rem]">
       <div>
         <div class="flex text-center justify-center w-full">
-          <h2 class="font-semibold">Updates & News</h2>
+          <h2 class="font-semibold">News & Updates</h2>
         </div>
         <div class="flex flex-wrap justify-center items-center space-y-4 space-x-4 mb-8">
           <div v-for="item in updates" :key="item.uploadtime" class="card w-96 bg-base-100 shadow-xl">
