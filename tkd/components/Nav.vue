@@ -22,10 +22,10 @@
       </div>
       <div class="flex-none hidden md:block">
         <ul class="menu menu-horizontal space-x-4">
-          <li><nuxt-link to="/about" class="text-lg rounded">About Us</nuxt-link></li>
-          <li><nuxt-link to="/updates" class="text-lg rounded">News & Updates</nuxt-link></li>
-          <li><nuxt-link to="/classes" class="text-lg rounded">Classes</nuxt-link></li>
-          <li><nuxt-link to="/gallery" class="text-lg rounded">Gallery</nuxt-link></li>
+          <li><nuxt-link to="/about" class="text-lg rounded active:bg-white">About Us</nuxt-link></li>
+          <li><nuxt-link to="/updates" class="text-lg rounded active:bg-white">News & Updates</nuxt-link></li>
+          <li><nuxt-link to="/classes" class="text-lg rounded active:bg-white">Classes</nuxt-link></li>
+          <li><nuxt-link to="/gallery" class="text-lg rounded active:bg-white">Gallery</nuxt-link></li>
         </ul>
       </div>
     </div>
