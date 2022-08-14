@@ -2,11 +2,11 @@
   <div>
     <Nav :logo="footer.logo" />
 
-    <section class="overflow-hidden text-gray-700 mt-[4rem]">
-      <div class="flex text-center justify-center w-full">
-        <h2 class="font-semibold">Gallery</h2>
+    <section class="overflow-hidden text-gray-700 mt-[5rem]">
+      <div class="flex text-center justify-center w-full mb-4">
+        <h2 class="font-semibold text-3xl">Gallery</h2>
       </div>
-      <div class="container px-5 py-2 mb-8 mx-auto lg:pt-24 lg:px-32">
+      <div class="container px-5 py-2 mb-8 mx-auto lg:pt-24 lg:px-32 ">
         <div class="flex flex-wrap -m-1 md:-m-2">
           <div v-for="(block, i) in images" :key="block[0]" class="hidden flex-wrap w-1/2 md:flex">
             <div v-for="(image, j) in block" :key="image.image.url" class="group ease-in duration-150 p-1 flex-col justify-center relative text-center items-center flex md:p-2" :class="j === 2 ? (i % 2 === 0 ? 'w-full' : 'w-1/2') : j === 0 ? (i % 2 === 1 ? 'w-full' : 'w-1/2') : 'w-1/2'">

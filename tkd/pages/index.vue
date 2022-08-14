@@ -6,7 +6,7 @@
         <img class="w-full hidden md:block" src="@/assets/waves.svg" alt="" />
         <img class="w-full md:hidden" src="@/assets/layered-waves-haikei.svg" alt="">
         <div class="absolute text-center space-y-3 -mt-32 md:-mt-8">
-          <h2 class="overflow-visible font-bold text-white text-3xl sm:text-5xl md:text-6xl md:mb-4">K-Spirit Taekwondo</h2>
+          <h2 class="font-bold text-white text-3xl sm:text-5xl md:text-6xl md:mb-4">K-Spirit Taekwondo</h2>
           <h3 class="font-semibold text-white text-lg sm:text-2xl md:text-3xl">"Make the impossible possible"</h3>
         </div>
       </section>
@@ -18,12 +18,12 @@
         </div>
       </section>
       <section id="news" class="text-center items-center justify-center py-4">
-        <h2 class="font-semibold">News & Updates</h2>
+        <h2 class="font-semibold text-3xl lg:text-4xl">News & Updates</h2>
         <HomeNews :items="updates[0].items" />
       </section>
       <section id="cho" class="">
-        <nuxt-link to="about" class="my-4 flex flex-row space-x-4 justify-center items-center">
-          <h4 class="font-semibold md:text-3xl lg:text-4xl overflow-hidden">Meet Master Cho</h4>
+        <nuxt-link to="about" class="my-4 flex flex-row space-x-8 justify-center items-center">
+          <h4 class="font-semibold text-4xl lg:text-5xl overflow-hidden">Meet Master Cho</h4>
           <prismic-image :field="document.cho" alt="" class="h-28 aspect-square object-cover rounded-full md:h-36 lg:h-42" />
         </nuxt-link>
       </section>
@@ -31,14 +31,14 @@
         <Carousel :images="images" />
       </section>
       <section id="schedule" class="flex flex-col text-center items-center justify-center">
-        <h2 class="font-semibold">Schedule</h2>
+        <h2 class="font-semibold text-3xl lg:text-4xl">Schedule</h2>
         <prismic-image class="" :field="document.schedule" />
       </section>
-      <section id="location" class="flex flex-row items-center content-between justify-center">
+      <section id="location" class="flex flex-row items-center content-between justify-center space-x-2">
         <img src="@/assets/pin.svg" alt="" class="w-12 object-cover sm:w-16" />
-        <div id="location-text" class="flex flex-col content-center items-start">
-          <h5 class="font-semibold sm:text-2xl md:text-4xl md:py-2">Bay Ridge</h5>
-          <p class="sm:text-xl md:text-3xl">{{ footer.address[0].text }}</p>
+        <div id="location-text" class="flex flex-col content-center items-start space-y-1">
+          <h5 class="font-semibold text-2xl lg:text-3xl ">Bay Ridge</h5>
+          <p class="text-2xl lg:text-3xl">{{ footer.address[0].text }}</p>
         </div>
       </section>
       <Footer :data="footer" />
